@@ -97,6 +97,6 @@ class ArrangePath:
         """
         assert self.validate_input() == True, f"Bad input path: {self.my_path}, App failed"
         self.create_database_from_path()
-        return 0
+        return self.find_longest_item_path()
 
 
