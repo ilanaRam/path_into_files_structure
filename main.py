@@ -1,4 +1,4 @@
-from src.path_to_structure import ArrangePath
+from src.longest_absolute_file_path import ArrangePath
 
 
 def main():
