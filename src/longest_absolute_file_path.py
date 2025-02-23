@@ -5,8 +5,10 @@ from pathlib import Path
 
 class ArrangePath:
     """ 
-    class deals with file structure given as a string
-    Exp: # "dir\n\tsubdir1\n\t\tfile1.ext\n\t\tsubsubdir1\n\tsubdir2\n\t\tsubsubdir2\n\t\t\tfile2.ext"
+    class deals with 'file structure' given us as a string
+    Exp for a 'file structure' given us as a string:
+    # "dir\n\tsubdir1\n\t\tfile1.ext\n\t\tsubsubdir1\n\tsubdir2\n\t\tsubsubdir2\n\t\t\tfile2.ext"
+
     returns a length of the longest path to a file
 
     Look at the README.txt and get the idea of how I accessed to the solution
