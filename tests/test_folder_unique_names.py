@@ -7,6 +7,8 @@ class TestDifferentFoldersNames:
     @pytest.mark.parametrize("folders_names_list",# <---- this is a name of the fixture, each time the fixture will hold 1 path to test by a test
                              [
                                  (["gta", "gta(1)", "gta(2)", "gta", "avalon"]),
+                                 (["gta", "gta(2)", "gta", "gta(1)", "avalon"]),
+                                 (["gta", "gta(2)", "gta(4)", "gta", "gta", "gta","avalon"]),
                                  (["onepiece","onepiece(1)","onepiece(2)","onepiece(3)","onepiece"]),
                                  (["pes","fifa","gta","pes(2019)"]),
                                  (["gta"]),
