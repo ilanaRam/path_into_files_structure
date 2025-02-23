@@ -1,12 +1,10 @@
-
 import pytest
 
 
 class TestDifferentPathes:
 
     # Parametrized fixture, single test is being executed per test parameter
-    @pytest.mark.parametrize("files_path",
-                             # <---- this is a name of the fixture, each time the fixture will hold 1 path to test by a test
+    @pytest.mark.parametrize("files_path",# <---- this is a name of the fixture, each time the fixture will hold 1 path to test by a test
                              [
                                  (r"dir\n\tsubdir1\n\t\tfile1.ext\n\t\tsubsubdir1\n\tsubdir2\n\t\tsubsubdir2\n\t\t\tfile2.ext"),
                                  (r"dir\n\tsubdir1\n\t\tfile1.ext\n\t\tsubsubdir1\n\tsubdir2\n\t\tsubsubdir2\n\t\t\tfile2.ext\n\tfile3.txt")
