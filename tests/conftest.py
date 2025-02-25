@@ -1,6 +1,7 @@
 import pytest
 from src.longest_absolute_file_path import ArrangePath
 from src.unique_directories_names import CreateFoldersSameName
+from src.files_same_content import FilesSameContent
 
 
 @pytest.fixture
@@ -26,3 +27,15 @@ def folders_obj():
     my_class_obj = CreateFoldersSameName()
     yield my_class_obj  # it is like return
     print("\n+++++++ Folders TEST END ++++++++++++++++++++++++\n")
+
+@pytest.fixture
+def contents_obj():
+    """
+    fixture that will be called per test twice.
+    first time to create and yield obj of the ArrangePath class
+    second time for teardown
+    """
+    print("\n++++++++ Contents TEST START +++++++++++++++++++++++")
+    my_class_obj = FilesSameContent()
+    yield my_class_obj  # it is like return
+    print("\n+++++++ Contents TEST END ++++++++++++++++++++++++\n")
