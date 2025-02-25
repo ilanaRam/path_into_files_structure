@@ -11,4 +11,4 @@ def main():
     print(f"The longest len is: {longest_len}")
 
 if __name__ == '__main__':
-    pytest.main()
+    main()

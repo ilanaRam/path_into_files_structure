@@ -36,13 +36,15 @@ class CreateFoldersSameName:
         result: [gpt,gpt(1),gpt(2), alon]  this is the way the OS deals with duplicated dir names - it gives indexes
         """
         assert isinstance(dirs_list, List) or dirs_list or len(dirs_list) == 0, "Bad directories list ###"
+        self.folders_list = dirs_list.copy()
+        unique_dirs_names_list = []
 
-        print(f"\n\nThis is the list of the folder names: ")
-        print(dirs_list)
+        print(f"\n\nThis is given list of the folder names: ")
+        print(self.folders_list)
         tmp_dict = {}
 
         print(f"Start arranging the dir names in the new list with appropriate names")
-        for current_dir in dirs_list:
+        for current_dir in self.folders_list:
             if "(" in current_dir:
                 # here I will use string (iterable) slicing
                 base_name = current_dir[: current_dir.index("(")]  # get out only the dir name without (1), if I see this: "gta(1)" I extruct only "gta"
@@ -65,11 +67,11 @@ class CreateFoldersSameName:
 
             for index in folder_index_list:
                 if index == 0:
-                    self.folders_list.append(folder_name)
+                    unique_dirs_names_list.append(folder_name)
                 else:
-                    self.folders_list.append(f"{folder_name}({index})")
+                    unique_dirs_names_list.append(f"{folder_name}({index})")
         #print(f"Folders are: {self.folders_list} \n")
-        return self.folders_list
+        return unique_dirs_names_list
 
     def create_directories_by_os(self):
         print(f"Creation and naming of the directories ... started")
