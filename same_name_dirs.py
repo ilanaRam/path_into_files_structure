@@ -1,4 +1,4 @@
-from src.folders_creation_with_same_name_added_number import CreateFoldersSameName
+from src.unique_directories_names import CreateFoldersSameName
 import pytest
 
 
@@ -19,4 +19,4 @@ def main():
     print(f"The arranged list of directories is: {arranged_list}")
 
 if __name__ == '__main__':
-    pytest.main() # this means first run all tests then run this main()
+    main() # this means first run all tests then run this main()

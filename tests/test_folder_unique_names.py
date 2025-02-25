@@ -1,5 +1,5 @@
 import pytest
-from src.folders_creation_with_same_name_added_number import CreateFoldersSameName
+from src.unique_directories_names import CreateFoldersSameName
 
 class TestDifferentFoldersNames:
 
